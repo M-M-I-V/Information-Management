@@ -151,3 +151,46 @@ SELECT DATE_SUB(CURDATE(), INTERVAL 3 DAY);
 SELECT DATEDIFF('2025-02-28', '2025-02-20');
 
 SELECT CHAR(78, 69, 73, 76, 0, 74, 65, 89);
+
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY,
+    customer_name VARCHAR(255)
+);
+
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    order_details VARCHAR(100),
+    FOREIGN KEY(customer_id) REFERENCES customers(customer_id)
+    ON DELETE CASCADE ON UPDATE CASCADE
+); 
+
+INSERT INTO customers
+VALUES (1, 'John Doe'),
+       (2, 'Emily Smith'),
+       (3, 'Michael Williams');
+
+INSERT INTO orders
+VALUES (1, 1, 'Order 1 from John Doe'),
+       (2, 2, 'Order 1 from Emily Smith'),
+       (3, 3, 'Order 1 from Michael Williams');
+
+DROP TABLE orders;
+
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    order_details VARCHAR(100),
+    FOREIGN KEY(customer_id) REFERENCES customers(customer_id)
+    ON DELETE SET NULL ON UPDATE SET NULL
+); 
+
+INSERT INTO customers
+VALUES (1, 'John Doe'),
+       (2, 'Emily Smith'),
+       (3, 'Michael Williams');
+
+INSERT INTO orders
+VALUES (1, 1, 'Order 1 from John Doe'),
+       (2, 2, 'Order 1 from Emily Smith'),
+       (3, 3, 'Order 1 from Michael Williams');
