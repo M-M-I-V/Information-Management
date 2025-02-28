@@ -21,6 +21,8 @@ VALUES (1, 500, '2024-11-01', 1),
        (4, 200, '2024-11-04', 4),
        (5, 400, '2024-11-05', 5);
 
+-- AGGREGATE FUNCTIONS --
+
 -- Retrieve the number of accounts in sales table
 SELECT COUNT(sales_id) AS total_account
 FROM sales;
@@ -56,8 +58,8 @@ CREATE TABLE employees (
 -- Insert data in employees table
 INSERT INTO employees
 VALUES (1, 'John', 'Doe', 'IT'),
-       (2, 'James', 'Smith', 'IT'),
-       (3, 'Emily', 'Smith', 'HR'),
+       (2, 'James', 'Smith', 'HR'),
+       (3, 'Emily', 'Smith', 'IT'),
        (4, 'Michael', 'Williams', 'Marketing');
 
 SELECT department, GROUP_CONCAT(CONCAT(first_name, ' ', last_name) ORDER BY last_name) AS employee_name
@@ -81,8 +83,19 @@ FROM sales
 GROUP BY customer_id
 HAVING SUM(sales_amount > 400);
 
+-- SCALAR FUNCTIONS
+
 SELECT employee_id, UPPER(first_name) AS upper_case_first_name
 FROM employees;
 
 SELECT employee_id, LOWER(last_name) AS lower_case_last_name
+FROM employees;
+
+SELECT employee_id, CONCAT(first_name, ' ', last_name) AS full_name
+FROM employees;
+
+SELECT employee_id, UPPER(CONCAT(first_name, ' ', last_name)) AS full_name
+FROM employees;
+
+SELECT employee_id, CONCAT(UPPER(first_name), ' ', LOWER(last_name)) AS full_name
 FROM employees;
