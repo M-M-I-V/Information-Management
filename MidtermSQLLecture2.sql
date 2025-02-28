@@ -99,3 +99,55 @@ FROM employees;
 
 SELECT employee_id, CONCAT(UPPER(first_name), ' ', LOWER(last_name)) AS full_name
 FROM employees;
+
+ALTER TABLE employees
+ADD salary DECIMAL(10, 2);
+
+UPDATE employees
+SET salary = 200000.75
+WHERE employee_id = 1;
+
+UPDATE employees
+SET salary = 50000.00
+WHERE employee_id = 2;
+
+UPDATE employees
+SET salary = 300000.80
+WHERE employee_id = 3;
+
+UPDATE employees
+SET salary = 75000.25
+WHERE employee_id = 4;
+
+SELECT employee_id, ROUND(salary, 2) AS rounded_salary
+FROM employees;
+
+SELECT employee_id, CEILING(salary) AS ceiling_salary
+FROM employees;
+
+SELECT employee_id, FLOOR(salary) AS floor_salary
+FROM employees;
+
+SELECT CURTIME();
+
+SELECT CURDATE();
+
+SELECT YEAR('2025-02-28');
+
+SELECT YEAR(CURDATE());
+
+SELECT DAYOFWEEK('2025-02-28');
+
+SELECT DAYOFWEEK(CURDATE());
+
+SELECT DATE_ADD('2025-02-28', INTERVAL 3 DAY);
+
+SELECT DATE_ADD(CURDATE(), INTERVAL 3 DAY);
+
+SELECT DATE_SUB('2025-02-28', INTERVAL 3 DAY);
+
+SELECT DATE_SUB(CURDATE(), INTERVAL 3 DAY);
+
+SELECT DATEDIFF('2025-02-28', '2025-02-20');
+
+SELECT CHAR(78, 69, 73, 76, 0, 74, 65, 89);
