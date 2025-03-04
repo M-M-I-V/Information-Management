@@ -101,3 +101,15 @@ UNION ALL
 SELECT students.name, sports.sport_name
 FROM students
 RIGHT JOIN sports;
+
+-- Create students_2023 table
+CREATE TABLE students_2023 (
+    id INT PRIMARY KEY, 
+    name VARCHAR(50)
+);
+
+-- Create students_2024 table
+CREATE TABLE students_2023 (
+    id INT PRIMARY KEY, 
+    name VARCHAR(50)
+);
