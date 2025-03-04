@@ -92,3 +92,12 @@ VALUES (1, 'John'),
 INSERT INTO sports
 VALUES (2, 'Basketball'),
        (3, 'Soccer');
+
+-- Full joined students and sports table
+SELECT students.name, sports.sport_name
+FROM students
+LEFT JOIN sports
+UNION ALL
+SELECT students.name, sports.sport_name
+FROM students
+RIGHT JOIN sports;
