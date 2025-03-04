@@ -43,3 +43,12 @@ CREATE TABLE suppliers (
     id INT PRIMARY KEY, 
     supplier_name VARCHAR(50)
 );
+
+INSERT INTO products
+VALUES (1, ‘Product A’, 201),
+       (2, ‘Product B’, 202),
+       (3, ‘Product C’, 203);
+
+INSERT INTO suppliers
+VALUES (201, ‘Supplier 1’),
+       (202, ‘Supplier 2’);
