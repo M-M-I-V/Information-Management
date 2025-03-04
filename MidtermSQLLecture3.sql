@@ -52,3 +52,13 @@ VALUES (1, ‘Product A’, 201),
 INSERT INTO suppliers
 VALUES (201, ‘Supplier 1’),
        (202, ‘Supplier 2’);
+
+SELECT products.product_name, suppliers.supplier_name
+FROM products 
+LEFT JOIN suppliers 
+ON products.supplier_id = suppliers.id;
+
+SELECT products.product_name, suppliers.supplier_name
+FROM products 
+RIGHT JOIN suppliers 
+ON products.supplier_id = suppliers.id;
