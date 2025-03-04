@@ -82,3 +82,13 @@ CREATE TABLE sports (
     id INT PRIMARY KEY, 
     sport_name VARCHAR(50)
 );
+
+-- Insert records in students table
+INSERT INTO students 
+VALUES (1, 'John'),
+       (2, 'Jane');
+
+-- Insert records in sports table
+INSERT INTO sports
+VALUES (2, 'Basketball'),
+       (3, 'Soccer');
