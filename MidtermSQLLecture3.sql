@@ -32,3 +32,14 @@ SELECT employees_inner.employee_name, departments_inner.dept_name
 FROM employees_inner
 INNER JOIN departments_inner
 ON employees_inner.dept_id = depertments_inner.id;
+
+CREATE TABLE products (
+    id INT PRIMARY KEY, 
+    product_name VARCHAR(50),
+    supplier_id INT
+);
+
+CREATE TABLE suppliers (
+    id INT PRIMARY KEY, 
+    supplier_name VARCHAR(50)
+);
