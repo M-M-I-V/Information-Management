@@ -17,3 +17,13 @@ CREATE TABLE departments_inner (
     id INT PRIMARY KEY, 
     dept_name VARCHAR(50)
 );
+
+INSERT INTO employees_inner
+VALUES (1, ‘Alice’, 101),
+               (2, ‘Bob’, 102),
+               (3, ‘Charlie’, 103);
+
+INSERT INTO departments_inner
+VALUES (101, ‘HR’),
+               (102, ‘Finance’),
+               (103, ‘IT’);
