@@ -20,10 +20,15 @@ CREATE TABLE departments_inner (
 
 INSERT INTO employees_inner
 VALUES (1, ‘Alice’, 101),
-               (2, ‘Bob’, 102),
-               (3, ‘Charlie’, 103);
+       (2, ‘Bob’, 102),
+       (3, ‘Charlie’, 103);
 
 INSERT INTO departments_inner
 VALUES (101, ‘HR’),
-               (102, ‘Finance’),
-               (103, ‘IT’);
+       (102, ‘Finance’),
+       (103, ‘IT’);
+
+SELECT employees_inner.employee_name, departments_inner.dept_name
+FROM employees_inner
+INNER JOIN departments_inner
+ON employees_inner.dept_id = depertments_inner.id;
