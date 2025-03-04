@@ -127,3 +127,27 @@ VALUES (2, 'Bob'),
        (3, 'Charlie'),
        (5, 'Eve'),
        (6, 'Frank');
+
+SELECT name 
+FROM students_2023
+UNION 
+SELECT name 
+FROM students_2024;
+
+SELECT name 
+FROM students_2023
+UNION ALL
+SELECT name 
+FROM students_2024;
+
+SELECT name 
+FROM students_2023
+INTERSECT
+SELECT name 
+FROM students_2024;
+
+SELECT name 
+FROM students_2023
+EXCEPT
+SELECT name 
+FROM students_2024;
