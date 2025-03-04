@@ -1,4 +1,3 @@
-
 -- Create multiple_tables_21 database
 CREATE DATABASE multiple_tables_21;
 
@@ -71,3 +70,15 @@ SELECT products.product_name, suppliers.supplier_name
 FROM products 
 RIGHT JOIN suppliers 
 ON products.supplier_id = suppliers.id;
+
+-- Create students table
+CREATE TABLE students (
+    id INT PRIMARY KEY, 
+    name VARCHAR(50)
+);
+
+-- Create sports table
+CREATE TABLE sports (
+    id INT PRIMARY KEY, 
+    sport_name VARCHAR(50)
+);
