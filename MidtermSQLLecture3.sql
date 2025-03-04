@@ -113,3 +113,17 @@ CREATE TABLE students_2023 (
     id INT PRIMARY KEY, 
     name VARCHAR(50)
 );
+
+-- Insert records in students_2023 table
+INSERT INTO students_2023
+VALUES (1, 'Alice'), 
+       (2, 'Bob'),
+       (3, 'Charlie'),
+       (4, 'Alice');
+
+-- Insert records in students_2024 table
+INSERT INTO students_2024
+VALUES (2, 'Bob'),
+       (3, 'Charlie'),
+       (5, 'Eve'),
+       (6, 'Frank');
