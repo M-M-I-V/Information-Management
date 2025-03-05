@@ -38,6 +38,7 @@ CREATE TABLE Orders (
     CustomerId INT,
     OrderDate DATE,
     FOREIGN KEY (CustomerId) REFERENCES Customers(CustomerId)
+    ON DELETE CASCADE
 );
 
 INSERT INTO Customers
@@ -52,3 +53,23 @@ VALUES (1, 1, '2021-10-01'),
 
 DELETE FROM Customers
 WHERE CustomerId = 3;
+
+CREATE TABLE Departments (
+    dept_id INT PRIMARY KEY,
+    dept_name VARCHAR(50)
+    ON DELETE SET NULL
+);
+
+CREATE TABLE Employees (
+    employee_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    dept_id INT,
+    FOREIGN KEY (dept_id) REFERENCES Departments(dept_id)
+    ON DELETE SET NULL
+);
+
+CREATE TABLE Products (
+    ProductId INT PRIMARY KEY,
+    ProductName VARCHAR(50),
+    Price DECIMAL(10, 2) CHECK (Price > 0)
+);
