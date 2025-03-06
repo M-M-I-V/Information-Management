@@ -36,6 +36,7 @@ FROM Customers AS C
 INNER JOIN Orders AS O
 ON C.CustomerID = O.CustomerID;
 
+-- Create Departments table
 CREATE TABLE Departments (
     DepartmentID INT PRIMARY KEY,
     DepartmentName VARCHAR(50)
@@ -50,7 +51,7 @@ CREATE TABLE Employees (
 );
 
 -- Insert data into Departments table
-INSERT INTO
+INSERT INTO Departments
 VALUES (10, 'HR'),
        (20, 'IT'),
        (30, 'Sales');
@@ -66,7 +67,7 @@ VALUES (1, 'John', 10),
 -- Select data from Employees and Departments tables
 SELECT E.EmployeeName, D.DepartmentName
 FROM Employees AS E
-INNER JOIN Departments AS D
+LEFT JOIN Departments AS D
 ON E.DepartmentID = D.DepartmentID;
 
 -- Create Products_2023 table
@@ -99,11 +100,11 @@ VALUES (1, 'Widget', 15),
        (7, 'Gadget', 22),
        (8, 'Thingamajig', 40);
 
--- Combine data from Products_2023 and Products_2024 tables
-SELECT *
+-- List all distinct products from both Products_2023 and Products_2024 tables
+SELECT DISTINCT ProductName
 FROM Products_2023
 UNION
-SELECT *
+SELECT DISTINCT ProductName
 FROM Products_2024;
 
 -- Create Colors table
