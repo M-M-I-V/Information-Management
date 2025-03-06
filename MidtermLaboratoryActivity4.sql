@@ -70,3 +70,19 @@ CREATE TABLE Products_2024 (
     ProductName VARCHAR(50),
     Price DECIMAL(10,2)
 );
+
+-- Insert data into Products_2023 table
+INSERT INTO Products_2023
+VALUES (1, 'Widget', 10),
+       (2, 'Gadget', 20),
+       (3, 'Gizmo', 30),
+       (4, 'Doohickey', 25),
+       (5, 'Widget', 12);
+
+-- Insert data into Products_2024 table
+INSERT INTO Products_2024 
+VALUES (1, 'Widget', 15),
+       (2, 'Gizmo', 35),
+       (6, 'Gizmo', 32),
+       (7, 'Gadget', 22),
+       (8, 'Thingamajig', 40);
