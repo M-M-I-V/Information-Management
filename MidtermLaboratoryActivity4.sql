@@ -29,3 +29,16 @@ VALUES (101, 1, '2024-01-15', 200),
        (103, 3, '2024-03-10', 150),
        (104, 4, '2024-03-15', 300),
        (105, 5, '2024-04-02', 1200);
+
+CREATE TABLE Departments (
+    DepartmentID INT PRIMARY KEY,
+    DepartmentName VARCHAR(50)
+);
+
+-- Create Employees table
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    EmployeeName VARCHAR(50),
+    DepartmentID INT,
+    FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
+);
