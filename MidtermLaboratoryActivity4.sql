@@ -98,3 +98,19 @@ CREATE TABLE Sizes (
     SizeID INT PRIMARY KEY,
     SizeName VARCHAR(50)
 );
+
+-- Insert data into Colors table
+INSERT INTO Colors 
+VALUES (1, 'Red'),
+       (2, 'Blue'),
+       (3, 'Green'),
+       (4, 'Yellow'),
+       (5, 'Black');
+
+-- Insert data into Sizes table
+INSERT INTO Sizes
+VALUES (1, 'Small'),
+       (2, 'Medium'),
+       (3, 'Large'),
+       (4, 'Extra-Large'),
+       (5, 'Jumbo');
