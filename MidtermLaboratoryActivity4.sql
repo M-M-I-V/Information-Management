@@ -86,3 +86,15 @@ VALUES (1, 'Widget', 15),
        (6, 'Gizmo', 32),
        (7, 'Gadget', 22),
        (8, 'Thingamajig', 40);
+
+-- Create Colors table
+CREATE TABLE Colors (
+    ColorID INT PRIMARY KEY,
+    ColorName VARCHAR(50)
+);
+
+-- Create Sizes table
+CREATE TABLE Sizes (
+    SizeID INT PRIMARY KEY,
+    SizeName VARCHAR(50)
+);
