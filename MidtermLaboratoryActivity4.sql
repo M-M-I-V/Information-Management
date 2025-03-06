@@ -83,13 +83,6 @@ CREATE TABLE Products_2024 (
     Price DECIMAL(10,2)
 );
 
--- Combine data from Products_2023 and Products_2024 tables
-SELECT *
-FROM Products_2023
-UNION
-SELECT *
-FROM Products_2024;
-
 -- Insert data into Products_2023 table
 INSERT INTO Products_2023
 VALUES (1, 'Widget', 10),
@@ -105,6 +98,13 @@ VALUES (1, 'Widget', 15),
        (6, 'Gizmo', 32),
        (7, 'Gadget', 22),
        (8, 'Thingamajig', 40);
+
+-- Combine data from Products_2023 and Products_2024 tables
+SELECT *
+FROM Products_2023
+UNION
+SELECT *
+FROM Products_2024;
 
 -- Create Colors table
 CREATE TABLE Colors (
@@ -133,3 +133,8 @@ VALUES (1, 'Small'),
        (3, 'Large'),
        (4, 'Extra-Large'),
        (5, 'Jumbo');
+
+-- Combine data from Colors and Sizes tables
+SELECT *
+FROM Colors
+CROSS JOIN Sizes;
