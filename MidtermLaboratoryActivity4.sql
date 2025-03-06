@@ -49,6 +49,11 @@ CREATE TABLE Employees (
     FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
 );
 
+SELECT E.EmployeeName, D.DepartmentName
+FROM Employees AS E
+INNER JOIN Departments AS D
+ON E.DepartmentID = D.DepartmentID;
+
 -- Insert data into Departments table
 INSERT INTO
 VALUES (10, 'HR'),
