@@ -30,6 +30,12 @@ VALUES (101, 1, '2024-01-15', 200),
        (104, 4, '2024-03-15', 300),
        (105, 5, '2024-04-02', 1200);
 
+-- Select data from Customers and Orders tables
+SELECT C.CustomerName, O.OrderID, O.OrderDate, O.TotalAmount
+FROM Customers AS C
+INNER JOIN Orders AS O
+ON C.CustomerID = O.CustomerID;
+
 CREATE TABLE Departments (
     DepartmentID INT PRIMARY KEY,
     DepartmentName VARCHAR(50)
