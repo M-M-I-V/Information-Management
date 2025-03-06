@@ -49,11 +49,6 @@ CREATE TABLE Employees (
     FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
 );
 
-SELECT E.EmployeeName, D.DepartmentName
-FROM Employees AS E
-INNER JOIN Departments AS D
-ON E.DepartmentID = D.DepartmentID;
-
 -- Insert data into Departments table
 INSERT INTO
 VALUES (10, 'HR'),
@@ -68,6 +63,12 @@ VALUES (1, 'John', 10),
        (4, 'Diana', NULL),
        (5, 'Edward', 20);
 
+-- Select data from Employees and Departments tables
+SELECT E.EmployeeName, D.DepartmentName
+FROM Employees AS E
+INNER JOIN Departments AS D
+ON E.DepartmentID = D.DepartmentID;
+
 -- Create Products_2023 table
 CREATE TABLE Products_2023 (
     ProductID INT PRIMARY KEY,
@@ -81,6 +82,13 @@ CREATE TABLE Products_2024 (
     ProductName VARCHAR(50),
     Price DECIMAL(10,2)
 );
+
+-- Combine data from Products_2023 and Products_2024 tables
+SELECT *
+FROM Products_2023
+UNION
+SELECT *
+FROM Products_2024;
 
 -- Insert data into Products_2023 table
 INSERT INTO Products_2023
