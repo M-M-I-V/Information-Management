@@ -42,3 +42,17 @@ CREATE TABLE Employees (
     DepartmentID INT,
     FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
 );
+
+-- Insert data into Departments table
+INSERT INTO
+VALUES (10, 'HR'),
+       (20, 'IT'),
+       (30, 'Sales');
+
+-- Insert data into Employees table
+INSERT INTO Employees
+VALUES (1, 'John', 10),
+       (2, 'Alice', 20),
+       (3, 'Bob', 30),
+       (4, 'Diana', NULL),
+       (5, 'Edward', 20);
