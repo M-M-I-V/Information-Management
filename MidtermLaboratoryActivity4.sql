@@ -56,3 +56,17 @@ VALUES (1, 'John', 10),
        (3, 'Bob', 30),
        (4, 'Diana', NULL),
        (5, 'Edward', 20);
+
+-- Create Products_2023 table
+CREATE TABLE Products_2023 (
+    ProductID INT PRIMARY KEY,
+    ProductName VARCHAR(50),
+    Price DECIMAL(10,2)
+);
+
+-- Create Products_2024 table
+CREATE TABLE Products_2024 (
+    ProductID INT PRIMARY KEY,
+    ProductName VARCHAR(50),
+    Price DECIMAL(10,2)
+);
