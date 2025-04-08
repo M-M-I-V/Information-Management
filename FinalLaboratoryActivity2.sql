@@ -25,9 +25,9 @@ INSERT INTO products(product_name, stock_quantity, price) VALUES
 ('Gaming Chair', 10, 18999.99);
 
 INSERT INTO customers(customer_name, customer_balance) VALUES
-('Juan', 100000.00),
-('Pedro', 95000.00),
-('Jose', 98000.00);
+('Alice', 100000.00),
+('Bob', 9500.00),
+('Charlie', 98000.00);
 
 SELECT *
 FROM products;
